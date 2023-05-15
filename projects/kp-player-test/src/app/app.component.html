@@ -1,0 +1,28 @@
+<kpoint-player #player
+  [videoId]="'gcc-679f0d7a-1a5d-4ad0-9af9-a933e8411248'"
+  [domain]="'showcase-qa.zencite.com'"
+  [videoParams]="{'add-widgets':'title,text'}"
+  [height]="'360px'"
+  [width]="'640px'"
+  [onStateChange]="onStateChange"
+  [onTimeupdate]="onTimeupdate"
+  [onload]="onload"
+  [onError]="onError"
+  [samesite]="'true'"
+>
+</kpoint-player>
+
+<div class="inner-wrapper">
+    <h2 class="player-loaded" #load></h2>
+    <h2 class="state-changed" #state></h2>
+    <h2 class="time" #time></h2>
+    <h2 class="error" #error>No Error</h2>
+</div>
+
+<button (click)="getVideoDuration()">Get Video Duration</button>
+<button (click)="getPlayerState()">Get Player State</button>
+<button (click)="getcurrentTime()">Get Current Time</button>
+<button (click)="muteVideo()">Mute Video</button>
+<button (click)="unmuteVideo()">Unmute Video</button>
+<button (click)="seekTo(40000)">seekTo 40</button>
+<button (click)="getPlayerInfo()">Player Info</button>
